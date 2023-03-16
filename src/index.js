@@ -1,8 +1,16 @@
-import ReactDOM from "react-dom/client";
-import React from "react";
-import App from "./App";
+import React from "react"
+import "./index.css"
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+const Modal = ({ message, onClose }) => {
 
+    return (
+        <div className="modal-container">
+            <div className="modal">
+                <p>{message}</p>
+                <button className="closeButton" onClick={onClose}>Close</button>
+            </div>
+        </div>
+    )
+}
 
+export default Modal
